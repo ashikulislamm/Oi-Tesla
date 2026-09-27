@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  /* 60 / 30 / 10 Palette */
+  --mist-sage: #F3F5F2;       /* 60% dominant canvas neutral */
+  --deep-harbor: #123B3D;     /* 30% brand, nav, structural chrome */
+  --signal-amber: #E8A33D;    /* 10% focal CTA, live indicator */
+
+  /* Supporting Neutrals */
+  --ink: #1B211F;             /* Body text */
+  --ink-muted: #57615D;       /* Captions, timestamps, secondary labels */
+  --line: #DDE3DF;            /* Hairline dividers, card borders */
+  --surface-raised: #FFFFFF;  /* Elevated cards, modals */
+
+  /* Semantic States */
+  --status-success: #2E6E4E;  /* Completed */
+  --status-warning: #E8A33D;  /* Arriving */
+  --status-error: #B23A2E;    /* Cancelled / Rejected */
+
+  /* Radii */
+  --radius-control: 4px;
+  --radius-container: 12px;
+
+  /* Elevation */
+  --shadow-elevation: 0 4px 16px rgba(18, 59, 61, 0.12);
+}
+
+@theme inline {
+  --color-mist-sage: var(--mist-sage);
+  --color-deep-harbor: var(--deep-harbor);
+  --color-signal-amber: var(--signal-amber);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-surface-raised: var(--surface-raised);
+  --color-status-success: var(--status-success);
+  --color-status-warning: var(--status-warning);
+  --color-status-error: var(--status-error);
+
+  --font-heading: var(--font-fraunces), serif;
+  --font-body: var(--font-ibm-plex), sans-serif;
+  --font-data: var(--font-space-grotesk), sans-serif;
+}
+
+body {
+  background-color: var(--mist-sage);
+  color: var(--ink);
+  font-family: var(--font-ibm-plex), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+/* Tabular figures for Space Grotesk data numerals */
+.font-data {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-feature-settings: "tnum" 1;
+  font-variant-numeric: tabular-nums;
+}
